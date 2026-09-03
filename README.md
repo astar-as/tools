@@ -4,13 +4,15 @@
 
 Astar Tools is an open, deliberately curated directory of practical tools for building useful AI systems. It is not a marketplace, a generated list, or a claim that Astar recommends every entry. The directory keeps Astar’s assessment, open-source status, self-hosting status, and review date visible.
 
+Suggestions and pull requests are proposals. Every addition requires explicit Astar approval before merge or publication.
+
 The intended public URL is `tools.astar.sh`. Until the repository has been reviewed and approved, branch deployments are previews only; the custom domain and Production deployment remain separate release gates.
 
 ## What is in the repository
 
 - A statically generated Next.js App Router site
 - A typed, pull-request-friendly tool catalogue in `content/tools.ts`
-- Lightweight client-side search and category filtering
+- A compact category-based index with no client-side application state
 - Metadata, Open Graph image generation, sitemap and robots configuration
 - An editorial policy, contribution guide and issue template
 - No authentication, CMS, database, analytics or vendor-logo requests

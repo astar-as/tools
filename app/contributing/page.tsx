@@ -16,7 +16,8 @@ export default function ContributingPage() {
         <h1>Improve the directory through evidence.</h1>
         <p>
           The collection is a typed file in the repository. Small, sourced pull requests are the preferred way to
-          add a tool, correct a fact or update a review date.
+          propose a tool, correct a fact or update a review date. A proposal is never publication: every addition
+          requires explicit Astar approval before merge.
         </p>
 
         <div className="policy-grid">

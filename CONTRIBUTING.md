@@ -2,6 +2,8 @@
 
 Thanks for helping improve the directory. The useful contribution is not a longer list; it is a clearer, better-sourced collection.
 
+Every addition requires explicit Astar approval before merge. Opening an issue or pull request proposes a change; it does not place that change in the directory.
+
 ## Suggest a tool
 
 Open a **Suggest a tool** issue and include:

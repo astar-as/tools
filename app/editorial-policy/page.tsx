@@ -16,7 +16,8 @@ export default function EditorialPolicyPage() {
         <h1>Judgment, with the evidence left visible.</h1>
         <p>
           Astar Tools is deliberately curated. Inclusion means the tool is relevant to building useful AI systems;
-          it does not automatically mean Astar uses, endorses or recommends it.
+          it does not automatically mean Astar uses, endorses or recommends it. Every addition requires explicit
+          Astar approval before publication.
         </p>
 
         <div className="policy-grid">

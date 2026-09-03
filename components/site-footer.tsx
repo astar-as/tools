@@ -3,12 +3,10 @@ import Link from "next/link";
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <p>
-        An open directory by <a href="https://astar.sh/">Astar</a>.
-      </p>
       <nav aria-label="Footer navigation">
+        <a href="https://astar.sh/">Astar ↗</a>
         <a href="https://github.com/astar-as/tools" target="_blank" rel="noreferrer">
-          GitHub <span aria-hidden="true">↗</span>
+          GitHub ↗
         </a>
         <Link href="/contributing">Contributing</Link>
         <Link href="/editorial-policy">Editorial policy</Link>
@@ -17,9 +15,10 @@ export function SiteFooter() {
           target="_blank"
           rel="noreferrer"
         >
-          Suggest a tool <span aria-hidden="true">↗</span>
+          Suggest a tool ↗
         </a>
       </nav>
+      <p>Every addition is reviewed by Astar before publication.</p>
     </footer>
   );
 }

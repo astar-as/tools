@@ -4,6 +4,8 @@ Version 1.0 — 3 September 2026
 
 Astar Tools is deliberately curated. Inclusion means a tool is relevant to building useful AI systems; it does not automatically mean Astar uses, endorses or recommends it.
 
+Every addition requires explicit Astar approval before it is merged or published. Suggestions and pull requests are proposals, not acceptance.
+
 ## Selection criteria
 
 An entry should:

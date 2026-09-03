@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for contributing. Inclusion is editorial and does not imply Astar endorsement. Primary sources make a proposal reviewable.
+        Thanks for contributing. This form is a proposal only: every addition requires explicit Astar approval before publication. Inclusion does not imply endorsement. Primary sources make a proposal reviewable.
   - type: input
     id: name
     attributes:

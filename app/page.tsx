@@ -1,6 +1,5 @@
 import { Directory } from "@/components/directory";
 import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
 import { tools } from "@/content/tools";
 
 const collectionSchema = {
@@ -29,25 +28,14 @@ const collectionSchema = {
 export default function Home() {
   return (
     <div className="page-shell">
-      <SiteHeader />
-      <main>
-        <section className="hero" aria-labelledby="page-title">
-          <div>
-            <p className="eyebrow">An open directory by Astar · {tools.length} tools</p>
-            <h1 id="page-title">Tools for building AI that works.</h1>
-          </div>
-          <div className="hero-note">
-            <p>
-              A deliberately small collection for people who need to move from a promising demo to a useful,
-              inspectable system.
-            </p>
-            <p>
-              Inclusion is editorial judgment, not a blanket recommendation. Every status and unknown is stated
-              plainly.
-            </p>
-          </div>
-        </section>
-
+      <main className="home-page">
+        <header className="home-intro">
+          <p className="site-name">tools.astar.sh</p>
+          <h1 id="page-title">Tools for building AI that works.</h1>
+          <p>
+            An open directory by <a href="https://astar.sh/">Astar</a> · {tools.length} tools.
+          </p>
+        </header>
         <Directory />
       </main>
       <SiteFooter />
