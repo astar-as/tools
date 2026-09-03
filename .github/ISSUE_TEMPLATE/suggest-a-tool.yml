@@ -1,0 +1,70 @@
+name: Suggest a tool
+description: Propose a sourced addition or correction for the curated directory.
+title: "Tool: "
+labels:
+  - suggestion
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. Inclusion is editorial and does not imply Astar endorsement. Primary sources make a proposal reviewable.
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+    validations:
+      required: true
+  - type: input
+    id: official_url
+    attributes:
+      label: Official product or documentation URL
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: source_url
+    attributes:
+      label: Canonical source repository
+      description: Leave blank if none exists or it is unknown.
+      placeholder: https://github.com/owner/repository
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - AI coding
+        - Research and evaluation
+        - Design and prototyping
+        - Data and infrastructure
+        - Robotics, computer vision and 3D
+        - Deployment and operations
+        - Norwegian data and public services
+        - Astar-built tools
+    validations:
+      required: true
+  - type: textarea
+    id: useful_for
+    attributes:
+      label: What is it useful for?
+      description: Describe the concrete system-building problem, not the marketing category.
+    validations:
+      required: true
+  - type: textarea
+    id: why_here
+    attributes:
+      label: Why should it be included?
+      description: Explain what it adds to this deliberately small collection.
+    validations:
+      required: true
+  - type: textarea
+    id: licensing
+    attributes:
+      label: Open-source and self-hosting evidence
+      description: Include licence and deployment links. Write unknown when evidence is missing.
+    validations:
+      required: true
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Caveats or unknowns
+      description: Pricing, model-provider requirements, archived components, licensing boundaries, or facts still to verify.
