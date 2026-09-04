@@ -15,7 +15,8 @@ The intended public URL is `tools.astar.sh`. Until the repository has been revie
 - A compact category-based index with no client-side application state
 - Metadata, Open Graph image generation, sitemap and robots configuration
 - An editorial policy, contribution guide and issue template
-- No authentication, CMS, database, analytics or vendor-logo requests
+- No authentication, CMS, database or analytics
+- One locally stored favicon per entry; no runtime vendor-logo hotlinks
 
 ## Data model
 

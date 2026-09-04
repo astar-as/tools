@@ -4,7 +4,9 @@ export function SiteFooter() {
   return (
     <footer className="site-footer">
       <nav aria-label="Footer navigation">
-        <a href="https://astar.sh/">Astar ↗</a>
+        <a href="https://astar.sh/" target="_blank" rel="noreferrer">
+          Astar ↗
+        </a>
         <a href="https://github.com/astar-as/tools" target="_blank" rel="noreferrer">
           GitHub ↗
         </a>
@@ -18,7 +20,7 @@ export function SiteFooter() {
           Suggest a tool ↗
         </a>
       </nav>
-      <p>Every addition is reviewed by Astar before publication.</p>
+      <p>Additions require explicit Astar approval.</p>
     </footer>
   );
 }

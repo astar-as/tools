@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { categories, statusDefinitions, tools, type Tool } from "@/content/tools";
 
 function toolSummary(tool: Tool) {
@@ -14,14 +15,14 @@ function toolSummary(tool: Tool) {
 
 export function Directory() {
   return (
-    <div className="category-grid" aria-label="Tool directory">
+    <div className="directory" aria-label="Tool directory">
       {categories.map((category) => {
         const categoryTools = tools.filter((tool) => tool.category === category.id);
 
         return (
-          <section className="category-section" key={category.id} aria-labelledby={`${category.id}-title`}>
+          <section className="category" key={category.id} aria-labelledby={`${category.id}-title`}>
             <h2 id={`${category.id}-title`}>{category.name}</h2>
-            <ul className="tool-list">
+            <ul>
               {categoryTools.map((tool) => {
                 const summary = toolSummary(tool);
                 const statusNote = "statusNote" in tool ? tool.statusNote : statusDefinitions[tool.astarStatus];
@@ -35,18 +36,24 @@ export function Directory() {
                       title={summary}
                       aria-describedby={`${tool.id}-details`}
                     >
-                      <span className="tool-name">
-                        {tool.name}
-                        <span className="external-arrow" aria-hidden="true">
-                          ↗
-                        </span>
-                      </span>
+                      <Image
+                        className="tool-icon"
+                        src={`/favicons/${tool.id}.png`}
+                        alt=""
+                        width={16}
+                        height={16}
+                        unoptimized
+                      />
+                      <span className="tool-name">{tool.name}</span>
                       <span
                         className="tool-status"
                         data-status={tool.astarStatus.toLowerCase()}
                         title={statusNote}
                       >
                         {tool.astarStatus}
+                      </span>
+                      <span className="external-arrow" aria-hidden="true">
+                        ↗
                       </span>
                     </a>
                     <span className="sr-only" id={`${tool.id}-details`}>
