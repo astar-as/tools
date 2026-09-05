@@ -167,7 +167,7 @@ a:focus-visible {
   min-width: 0;
   min-height: 19px;
   align-items: center;
-  grid-template-columns: 16px minmax(0, 1fr) auto 8px;
+  grid-template-columns: 16px minmax(0, 1fr) 8px;
   gap: 7px;
   color: var(--muted);
   font-size: 11px;
@@ -193,26 +193,6 @@ a:focus-visible {
   text-overflow: ellipsis;
   text-underline-offset: 0.16em;
   white-space: nowrap;
-}
-
-.tool-status {
-  color: var(--faint);
-  font-size: 6px;
-  font-weight: 750;
-  letter-spacing: 0.085em;
-  text-transform: uppercase;
-}
-
-.tool-status[data-status="used"] {
-  color: #164c3b;
-}
-
-.tool-status[data-status="tested"] {
-  color: #0c4f6c;
-}
-
-.tool-status[data-status="unverified"] {
-  color: #793d1d;
 }
 
 .external-arrow {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { categories, statusDefinitions, tools, type Tool } from "@/content/tools";
+import { categories, tools, type Tool } from "@/content/tools";
 
 function toolSummary(tool: Tool) {
   return [
@@ -8,7 +8,6 @@ function toolSummary(tool: Tool) {
     `Tags: ${tool.tags.join(", ")}.`,
     `Open source: ${tool.openSource.label}.`,
     `Self-hosting: ${tool.selfHosting.label}.`,
-    `Astar status: ${tool.astarStatus}.`,
     `Last reviewed: ${tool.lastReviewed}.`,
   ].join(" ");
 }
@@ -25,7 +24,6 @@ export function Directory() {
             <ul>
               {categoryTools.map((tool) => {
                 const summary = toolSummary(tool);
-                const statusNote = "statusNote" in tool ? tool.statusNote : statusDefinitions[tool.astarStatus];
 
                 return (
                   <li key={tool.id}>
@@ -45,13 +43,6 @@ export function Directory() {
                         unoptimized
                       />
                       <span className="tool-name">{tool.name}</span>
-                      <span
-                        className="tool-status"
-                        data-status={tool.astarStatus.toLowerCase()}
-                        title={statusNote}
-                      >
-                        {tool.astarStatus}
-                      </span>
                       <span className="external-arrow" aria-hidden="true">
                         ↗
                       </span>
