@@ -1,6 +1,8 @@
 import { ImageResponse } from "next/og";
 import { tools } from "@/content/tools";
 
+const toolCount: number = tools.length;
+
 export const alt = "Astar Tools — Tools for building AI that works";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -33,7 +35,7 @@ export default function OpenGraphImage() {
         >
           <span>astar / tools</span>
           <span style={{ color: "#d74600" }}>
-            Open directory · {tools.length} {tools.length === 1 ? "tool" : "tools"}
+            Open directory · {toolCount} {toolCount === 1 ? "tool" : "tools"}
           </span>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>

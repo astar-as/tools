@@ -2,12 +2,14 @@ import { Directory } from "@/components/directory";
 import { SiteFooter } from "@/components/site-footer";
 import { tools } from "@/content/tools";
 
+const toolCount: number = tools.length;
+
 const collectionSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
   name: "Astar Tools",
   description: "Tools for building AI that works.",
-  numberOfItems: tools.length,
+  numberOfItems: toolCount,
   itemListElement: tools.map((tool, index) => ({
     "@type": "ListItem",
     position: index + 1,
@@ -26,7 +28,7 @@ export default function Home() {
             <h1>Tools for building AI that works.</h1>
           </div>
           <p className="collection-note">
-            An open directory by <a href="https://astar.sh/">Astar</a> · {tools.length} {tools.length === 1 ? "tool" : "tools"}
+            An open directory by <a href="https://astar.sh/">Astar</a> · {toolCount} {toolCount === 1 ? "tool" : "tools"}
           </p>
         </header>
         <Directory />
